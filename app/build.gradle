@@ -1,4 +1,22 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'http://download.crashlytics.com/maven' }
+    }
+
+    dependencies {
+        classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.14.7'
+        classpath 'me.tatarka:gradle-retrolambda:2.5.0'
+    }
+}
+
+repositories {
+    maven { url 'http://download.crashlytics.com/maven' }
+}
+
 apply plugin: 'com.android.application'
+apply plugin: 'crashlytics'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 21
@@ -10,6 +28,8 @@ android {
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -17,8 +37,29 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
 }
 
 dependencies {
+    provided 'com.squareup.dagger:dagger-compiler:1.2.2'
+    provided 'org.parceler:parceler:0.2.15'
+    provided 'org.projectlombok:lombok:1.16.0'
     compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.crashlytics.android:crashlytics:1.1.13'
+    compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.squareup.dagger:dagger:1.2.2'
+    compile 'com.squareup.okhttp:okhttp:2.0.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'io.reactivex:rxandroid:0.24.0'
+    androidTestCompile 'com.squareup.assertj:assertj-android:1.0.0'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.0') {
+        exclude group: 'javax.inject'
+    }
 }

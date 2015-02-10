@@ -3,4 +3,9 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
     </style>
 
+    <style name="AppButton" parent="android:Widget.Button">
+        <item name="android:textSize">40sp</item>
+        <item name="android:background">@drawable/button_background</item>
+    </style>
+
 </resources>
