@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zero">夜</string>
+    <string name="one">一</string>
+    <string name="add">加</string>
+    <string name="result">果</string>
+</resources>

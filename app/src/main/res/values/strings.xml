@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Awesome Calculator</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="add">+</string>
+    <string name="result">=</string>
 </resources>

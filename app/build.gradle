@@ -44,6 +44,14 @@ android {
     packagingOptions {
         exclude 'LICENSE.txt'
     }
+    productFlavors {
+        waniliowy {
+
+        }
+        truskawkowy {
+
+        }
+    }
 }
 
 dependencies {

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:id="@+id/calculator_current_state"/>
+
+    <LinearLayout
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/calculator_zero"
+            android:text="@string/zero"
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            style="@style/AppButton"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/calculator_one"
+            android:text="@string/one"
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/calculator_add"
+            android:text="@string/add"
+            android:layout_weight="50"
+            android:layout_width="@dimen/dsads"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:id="@+id/calculator_result"
+            android:text="@string/result"
+            android:layout_weight="50"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

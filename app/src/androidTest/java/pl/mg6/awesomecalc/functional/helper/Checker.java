@@ -9,7 +9,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 public final class Checker {
 
-    public static void checkCurrentStateContains(String text) {
+    public static void checkCurrentStateEquals(String text) {
         checkViewWithIdContains(R.id.calculator_current_state, text);
     }
 
