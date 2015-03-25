@@ -19,13 +19,13 @@ apply plugin: 'crashlytics'
 apply plugin: 'me.tatarka.retrolambda'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 22
+    buildToolsVersion "22.0.0"
 
     defaultConfig {
         applicationId "pl.mg6.awesomecalc"
         minSdkVersion 16
-        targetSdkVersion 21
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
 
@@ -50,7 +50,7 @@ dependencies {
     provided 'com.squareup.dagger:dagger-compiler:1.2.2'
     provided 'org.parceler:parceler:0.2.15'
     provided 'org.projectlombok:lombok:1.16.0'
-    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:appcompat-v7:22.0.0'
     compile 'com.crashlytics.android:crashlytics:1.1.13'
     compile 'com.jakewharton:butterknife:6.1.0'
     compile 'com.squareup.dagger:dagger:1.2.2'
