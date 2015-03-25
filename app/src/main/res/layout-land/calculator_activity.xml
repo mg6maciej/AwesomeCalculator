@@ -22,8 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            style="@style/AppButton"
-            android:text="@string/zero"
+            android:text="0"
             android:id="@+id/calculator_zero"/>
 
         <Button
@@ -32,14 +31,6 @@
             android:layout_weight="1"
             android:text="1"
             android:id="@+id/calculator_one"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
